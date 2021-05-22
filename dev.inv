@@ -1,2 +1,2 @@
 [appserver]
-172.31.30.18 ansible_user=ec2-user
+172.31.31.210 ansible_user=ec2-user
