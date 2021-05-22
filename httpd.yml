@@ -1,0 +1,19 @@
+---
+
+- name: "Installing httpd"
+  become: true
+  hosts: all
+  tasks:
+  - name: "Install httpd package"
+    yum:
+      update_cache: yes
+      name: httpd
+      state: present 
+  - name: "Starting httpd service"
+    service:
+      name: httpd
+      state: started
+  - name: "Copy index.html file"
+    copy:
+      src: index.html
+      dest: /var/www/html
